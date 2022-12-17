@@ -14,5 +14,3 @@ int Exponentiation (int FirstNumb, int SecondNumb)
     return product; 
 }
 Exponentiation(A, B);
-// double sum = Math.Pow(A,B);
-// System.Console.WriteLine(sum);
