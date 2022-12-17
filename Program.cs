@@ -1,25 +1,18 @@
-﻿// Программа, которая задает массив из 8 элементов и выводит их на экран.
-int [] array = new int[8];
-void CreateArray (int [] array)
+﻿// Метод, который принимает на вход число и выдает сумму цифр в числе.
+System.Console.WriteLine("Введите число");
+int numb = Convert.ToInt32(Console.ReadLine());
+int tithing = numb / 10;
+int NumbersSum (int tithing)
 {
-for (int i = 0; i < array.Length; i++)
-{
-    array [i] = new Random().Next(1,10);
-}
-}   
-void PrintArray (int [] array)
-{
-    System.Console.Write($"[{array[0]},");
-    for (int i = 1; i < array.Length; i++)
+    int sum = 0;
+    if (tithing < 0) tithing = tithing * -1;
+    while (tithing >= 10)
     {
-        if (i == array.Length-1)
-        {
-            System.Console.Write($"{array[i]}]");
-        }
-        else System.Console.Write($"{array[i]},");
-        
+        sum = sum + tithing % 10;
+        tithing = tithing / 10;
     }
-    System.Console.WriteLine();
+    sum = sum + tithing; 
+    return sum; 
 }
-CreateArray(array);
-PrintArray(array);
+NumbersSum(numb);
+System.Console.WriteLine(NumbersSum(numb));
