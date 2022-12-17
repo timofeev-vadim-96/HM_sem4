@@ -4,7 +4,6 @@ int numb = Convert.ToInt32(Console.ReadLine());
 
 int NumbersSum (int tithing)
 {
-    tithing = numb / 10;
     int sum = 0;
     if (tithing < 0) tithing = tithing * -1;
     while (tithing >= 10)
@@ -16,4 +15,4 @@ int NumbersSum (int tithing)
     return sum; 
 }
 NumbersSum(numb);
-System.Console.WriteLine(NumbersSum(numb));
+System.Console.WriteLine($"Сумма цифр в числе {numb} = {NumbersSum(numb)}");
